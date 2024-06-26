@@ -6,9 +6,9 @@ public class Meal {
 
     public Meal() {
 
-        burger = new Burger("Regular burger", 2.00);
-        drink = new Drink("Coke", "S");
-        side = new Side("Fries", 1.25);
+        this(new Burger("Regular burger", 2.00), 
+                new Drink("Coke", "S"), 
+                new Side("Fries", 1.25));
     }
 
     public Meal(Burger burger, Drink drink, Side side) {
