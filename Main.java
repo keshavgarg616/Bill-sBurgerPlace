@@ -7,7 +7,7 @@ public class Main {
         regularMeal.addBurgerTopping("Tomatoes", 0.10);
         regularMeal.addBurgerTopping("Onions", 0.10);
         regularMeal.addBurgerTopping("Cheese", 0.25);
-//        regularMeal.addBurgerTopping("Olives", 0.15);
+        regularMeal.addBurgerTopping("Olives", 0.15);
         System.out.println(regularMeal.getBill());
 
         Meal deluxeMeal = new Meal(new Burger("Deluxe Burger", 10.00),
