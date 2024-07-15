@@ -1,3 +1,5 @@
+package com.billsburgers;
+
 public class Meal {
 
     private Burger burger;
@@ -6,49 +8,33 @@ public class Meal {
 
     public Meal() {
 
-        this(new Burger("Regular burger", 2.00), 
-                new Drink("Coke", "S"), 
-                new Side("Fries", 1.25));
+        this("Regular burger", 2.00,
+                "Coke", "S",
+                "Fries", 1.25);
     }
 
-    public Meal(Burger burger, Drink drink, Side side) {
+    public Meal(String burgerType, double burgerBasePrice,
+                String drinkType, String drinkSize,
+                String sideType, double sidePrice) {
 
-        this.burger = burger;
-        this.drink = drink;
-        this.side = side;
+        burger = new Burger(burgerType, burgerBasePrice);
+        drink = new Drink(drinkType, drinkSize);
+        side = new Side(sideType, sidePrice);
     }
 
     public String getBill() {
 
-        String bill = "==============================================\nBILL\n-----\n" +
-                burger.getBurgerBill() + "\n" + drink.getDrinkBill();
-
-        if (burger.isDeluxe()) {
-            bill += "0";
-        } else {
-            bill += drink.getPrice();
-        }
-
-        bill += "\n" + side.getSideBill();
-
-        if (burger.isDeluxe()) {
-            bill += "0";
-        } else {
-            bill += side.getPrice();
-        }
-
-        bill += "\n\nTotal: $" + String.format("%.2f", getTotalPrice()) + "\n==============================================";
-
-        return bill;
+        return "=".repeat(46) + "\nBILL\n-----\n" +
+                burger.getBurgerBill() + "\n" + drink.getDrinkBill() +
+                (burger.isDeluxe() ? "0" : drink.getPrice()) +
+                "\n" + side.getSideBill() +
+                (burger.isDeluxe() ? "0" : side.getPrice()) +
+                "\n\nTotal: $" + String.format("%.2f", getTotalPrice()) + "\n" + "=".repeat(46);
     }
 
     public double getTotalPrice(){
 
-        if (burger.isDeluxe()) {
-            return Double.parseDouble(burger.getPrice());
-        } else {
-            return Double.parseDouble(burger.getPrice()) + Double.parseDouble(drink.getPrice()) + Double.parseDouble(side.getPrice());
-        }
+        return burger.isDeluxe() ? Double.parseDouble(burger.getPrice()) : Double.parseDouble(burger.getPrice()) + Double.parseDouble(drink.getPrice()) + Double.parseDouble(side.getPrice());
     }
 
     public void changeDrinkSize(String newDrinkSize) {
