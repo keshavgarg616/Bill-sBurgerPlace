@@ -5,7 +5,7 @@ This is my solution to OOPMasterChallenge!
 [Output.txt](https://github.com/user-attachments/files/15982516/Output.txt)
 
 ```
-Maximum number of toppings already added
+Olives couldn't be added since maximum number of toppings has been reached
 ==============================================
 BILL
 -----
