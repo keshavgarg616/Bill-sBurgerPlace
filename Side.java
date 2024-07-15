@@ -1,4 +1,6 @@
-public class Side {
+package com.billsburgers;
+
+class Side {
 
     private String type;
     private double price;
