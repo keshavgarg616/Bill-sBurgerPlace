@@ -4,7 +4,7 @@ This is my solution to OOPMasterChallenge!
 
 [Output.txt (Old, Please ignore)](https://github.com/user-attachments/files/15982516/Output.txt) 
 
-New Output
+New Output:
 ```
 Olives couldn't be added since maximum number of toppings has been reached
 ==============================================
