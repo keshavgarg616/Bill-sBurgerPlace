@@ -1,4 +1,6 @@
-public class Drink {
+package com.billsburgers;
+
+class Drink {
 
     private String type, size;
     private double price;
