@@ -1,4 +1,6 @@
-public class Burger {
+package com.billsburgers;
+
+class Burger {
 
     private String type, toppings;
     private double price;
@@ -11,11 +13,7 @@ public class Burger {
         numToppings = 0;
         toppings = "";
 
-        if (isDeluxe()) {
-            maxToppings = 5;
-        } else {
-            maxToppings = 3;
-        }
+        maxToppings = isDeluxe() ? 5 : 3;
     }
 
     public void addTopping(String topping, double price) {
@@ -23,18 +21,12 @@ public class Burger {
         if (numToppings < maxToppings) {
 
             numToppings++;
-
-            if (numToppings == 1) {
-                toppings += topping;
-            } else {
-                toppings += " + " + topping;
-            }
-
+            toppings += numToppings == 1 ? topping : " + " + topping;
             if (!isDeluxe()) {
                 this.price += price;
             }
         } else {
-            System.out.println("Maximum number of toppings already added");
+            System.out.println(topping + " couldn't be added since maximum number of toppings has been reached");
         }
     }
 
@@ -45,13 +37,7 @@ public class Burger {
 
     public String getBurgerBill() {
 
-        String toppingsForBill;
-        if (toppings.isEmpty()) {
-            toppingsForBill = "No toppings";
-        } else {
-            toppingsForBill = toppings;
-        }
-
+        String toppingsForBill = toppings.isEmpty() ? "No toppings" : toppings;
         return String.format("%s (%s) - $%.2f", type, toppingsForBill, price);
     }
 
