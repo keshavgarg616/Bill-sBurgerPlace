@@ -2,7 +2,7 @@ This is my solution to OOPMasterChallenge!
 
 **The output to my Main.java file is:**
 
-[Output.txt](https://github.com/user-attachments/files/15982516/Output.txt)
+[Output.txt](https://github.com/user-attachments/files/15982516/Output.txt) (Old, Please ignore)
 
 ```
 Olives couldn't be added since maximum number of toppings has been reached
@@ -25,3 +25,5 @@ Potato Wedges - $0
 Total: $10.00
 ==============================================
 ```
+
+Updated 15/07/2024 in regards to remarks by Instructor Mr. Eddie on Udemy
