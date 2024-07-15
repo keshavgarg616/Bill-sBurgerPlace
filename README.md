@@ -2,8 +2,9 @@ This is my solution to OOPMasterChallenge!
 
 **The output to my Main.java file is:**
 
-[Output.txt](https://github.com/user-attachments/files/15982516/Output.txt) (Old, Please ignore)
+[Output.txt (Old, Please ignore)](https://github.com/user-attachments/files/15982516/Output.txt) 
 
+New Output
 ```
 Olives couldn't be added since maximum number of toppings has been reached
 ==============================================
